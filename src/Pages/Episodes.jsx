@@ -33,12 +33,10 @@ export default function Episodes() {
   if (loading) return <Loader />
   if (error) return <div>{error}</div>
 
-  // Filtrado por temporada
   const filtered = seasonFilter
     ? episodes.filter(ep => String(ep.season) === String(seasonFilter))
     : episodes
-
-  // Obtener lista única de temporadas
+    
   const seasons = [...new Set(episodes.map(ep => ep.season))].sort((a, b) => a - b)
 
   return (

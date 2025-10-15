@@ -33,7 +33,6 @@ export default function Characters() {
     }
   }, [page])
 
-  // Filtrar por nombre localmente
   const filtered = characters.filter(character =>
     character.name.toLowerCase().includes(query.toLowerCase())
   )

@@ -13,17 +13,14 @@ export default function App() {
       <Navbar />
       <main className="container">
         <Routes>
-          {/* Página de inicio */}
+      
           <Route path="/" element={<Home />} />
 
-          {/* Personajes */}
           <Route path="/personajes" element={<Characters />} />
           <Route path="/personaje/:id" element={<CharacterDetail />} />
 
-          {/* Episodios */}
           <Route path="/episodios" element={<Episodes />} />
 
-          {/* Ubicaciones */}
           <Route path="/lugares" element={<Locations />} />
         </Routes>
       </main>

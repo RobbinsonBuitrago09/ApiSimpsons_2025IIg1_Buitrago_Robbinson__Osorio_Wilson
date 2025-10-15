@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import logo from '../assets/ImageTitleTheSimpsons.png' // 👈 importa el logo
+import logo from '../assets/ImageTitleTheSimpsons.png' 
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)

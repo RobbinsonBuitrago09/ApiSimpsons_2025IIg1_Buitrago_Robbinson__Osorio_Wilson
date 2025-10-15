@@ -11,9 +11,9 @@ export default function Home() {
             .then(res => res.json())
             .then(data => {
                 const personajes = data.results || data
-                // Filtramos solo a los 5 por ID
+              
                 const filtrados = personajes.filter(p => idsPrincipales.includes(p.id))
-                // Ordenamos según nuestro array de IDs
+                
                 const ordenados = idsPrincipales.map(id => filtrados.find(p => p.id === id)).filter(Boolean)
                 setFeatured(ordenados)
             })
@@ -22,10 +22,9 @@ export default function Home() {
 
     return (
         <div className="home">
-            {/* 🏡 Sección de bienvenida */}
             <div className="home-header">
                 <img
-                    src="{Banner}"
+                    src= {Banner}
                     alt="Logo Simpsons"
                     className="home-logo"
                 />
@@ -36,7 +35,6 @@ export default function Home() {
                 </p>
             </div>
 
-            {/* 👨‍👩‍👧 Personajes principales */}
             {featured.length > 0 && (
                 <div className="home-featured">
                     <h2>Personajes Principales</h2>
@@ -53,7 +51,6 @@ export default function Home() {
                 </div>
             )}
 
-            {/* 📅 Frase divertida */}
             <div className="home-quote">
                 <p>“¡Ay caramba!” — Bart Simpson</p>
             </div>
