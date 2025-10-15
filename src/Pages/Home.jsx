@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Banner from '../assets/Banner.png'
 
 export default function Home() {
     const [featured, setFeatured] = useState([])
@@ -24,7 +25,7 @@ export default function Home() {
             {/* 🏡 Sección de bienvenida */}
             <div className="home-header">
                 <img
-                    src="/src/assets/Banner.png"
+                    src="{Banner}"
                     alt="Logo Simpsons"
                     className="home-logo"
                 />
